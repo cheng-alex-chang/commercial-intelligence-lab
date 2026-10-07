@@ -34,3 +34,9 @@ The working mart reflects latest accepted restatements and is not an immutable h
 ## References
 
 The loader uses explicit transaction blocks described in the [Psycopg transaction documentation](https://www.psycopg.org/psycopg3/docs/basic/transactions.html). The local database uses the [official PostgreSQL Docker image](https://hub.docker.com/_/postgres).
+
+## Scale and metric scope
+
+Default inputs are fictional daily campaign aggregates covering a financially calibrated portfolio. The normal-day target is $13.4 billion / 365, based on the 2025 public gross-spend reference. `spend_usd` is a synthetic spend proxy; it does not reproduce TTD’s accounting definition or imply a media-only amount equal to its reported gross spend. Paid impressions are derived using declared fictional effective CPMs: display $4, CTV $25, audio $12. They are not impressions/opportunities analyzed by the live bidding platform.
+
+A compact `unit` profile retains exact enterprise control amounts ($400,000 normal account spend/day) with fewer rows. The default `commercial` profile allocates the total financial target across synthetic account sizes with a skewed distribution and modest daily variation. Both retain explicit zero and missing-data scenarios. Profiles are separate datasets/databases, not revisions of each other. See [scale assumptions](../outputs/SCALE_OVERVIEW.md).

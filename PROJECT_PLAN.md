@@ -1,10 +1,10 @@
 # TTD Commercial Intelligence Lab — Revised Project Plan
 
-**Reviewed:** October 6, 2026
+**Reviewed:** October 7, 2026 · scope simplified after portfolio review
 
 **Audience:** Software Engineer, Commercial Intelligence and Analytics; Senior Analyst, Commercial Intelligence & Analytics
 
-**Status:** M0 complete; M1 implemented and verified October 6, 2026; M2 next
+**Status:** M0 complete; M1 implemented and verified at commercial scale October 7, 2026; public walkthrough added; M2 next
 
 Implementation notes: the first slice uses JSON source envelopes, latest accepted SQL views, and a dedicated PostgreSQL test database. It does not yet publish immutable snapshots or generate signals. See [README.md](README.md) and [source contracts](docs/SOURCE_CONTRACTS.md) for the concrete implementation and current limits.
 
@@ -31,7 +31,7 @@ The following deliverables are recommended exercises inferred from those respons
 | Capability to practice | Shared evidence | Analyst emphasis | Engineer emphasis |
 | --- | --- | --- | --- |
 | Commercial problem framing | Decision brief and acceptance examples | Stakeholder questions, alternatives, concise recommendation | Technical requirements and architecture tradeoffs |
-| Trusted SQL/Python analysis | Reconciled account-day mart | Eligibility, comparison logic, explanatory narrative | Contracts, automated checks, incremental correctness |
+| Trusted SQL/Python analysis | Reconciled account-day SQL view | Eligibility, comparison logic, explanatory narrative | Contracts, automated checks, incremental correctness |
 | Proactive intelligence | Explainable daily investigation queue | Actionability and threshold calibration | Repeatable generation and reliable delivery |
 | Workflow usefulness | Owner, review state, dismissal reason | Review burden and useful-signal assessment | Event instrumentation and deduplication |
 | Operational readiness | Freshness evidence and recovery exercise | Communicate uncertainty and impact | CI, logs, rollback, deployment demonstration |
@@ -39,37 +39,33 @@ The following deliverables are recommended exercises inferred from those respons
 
 ## 3. Scope and architecture
 
-**Core:** four source contracts, deterministic fixtures, Python batch ingestion, PostgreSQL SQL models, scenario checks, and a generated daily CSV/Markdown queue. Publish one brief explaining an account decision.
+**Core:** four source contracts, deterministic fixtures, Python batch ingestion, PostgreSQL business queries, scenario checks, and a daily CSV/Markdown investigation report. Publish one brief explaining an account decision.
 
-**Shared expansion:** platform revenue, CRM snapshots, a reconciled revenue bridge, a repeatable run, and an instrumented review workflow.
+**Portfolio presentation:** a public GitHub repository, polished README, and static GitHub Pages walkthrough using a verified sample. Browser event controls illustrate source corrections and late arrival; they do not operate a backend queue.
 
-**Analyst branch:** stakeholder requirements, threshold analysis, one BI view, and an executive decision memo.
+**Analyst evidence:** decision requirements, comparison eligibility, threshold tradeoffs, and a short recommendation with uncertainty.
 
-**Engineer branch:** dbt, containerized setup, CI, API, a deployment/release demonstration, monitoring, and a recovery runbook.
-
-**Later extensions:** service cases, renewal/commitment examples, product telemetry, an LLM assistant, and fuller frontend integration. Renewal analysis requires a defined renewal event or commitment source; a scheduled campaign ending is insufficient.
+**Engineer evidence:** reproducible local setup, automated integration checks, atomic source acceptance, replay and correction handling, and a recovery explanation. These are part of the shared core, not a separate platform build.
 
 ```text
-Fictional daily files + completeness manifest
-                 |
-          Python batch loader
-                 |
-     Immutable raw versions + run ledger
-                 |
-     Staging -> facts/dimensions -> validated marts
-                 |
-     Versioned published snapshot + signal rules
-                 |
-     Daily queue -> owner review -> feedback events
-                 |
-       BI view / optional API / optional assistant
+Four fictional source contracts
+              |
+Python: validate -> accept atomically
+              |
+PostgreSQL: source history + accepted pointers + SQL views
+              |
+Account-day CSV -> investigation report
+              |
+Owner, evidence, uncertainty, next check
+
+Verified sample -> static GitHub Pages walkthrough
 ```
 
-PostgreSQL is the default local warehouse. Keep core transformations as reviewed SQL if learning dbt would delay the first useful output. Adopt dbt for the expanded model graph rather than maintaining two independent sets of business logic.
+Use one PostgreSQL database and direct SQL views. There is no required medallion structure or separate staging/fact/mart hierarchy. Preserve exact source versions because they support replay and evidence. Review the grain of every join without creating redundant copies of the same data. The current implementation has three stored tables and source-specific views; see [architecture decisions](docs/ARCHITECTURE.md).
 
-Spend an early learning session on Snowflake roles, warehouses, query history, and cost controls. After local reconciliation succeeds, port only one mart and verify matching results. A full warehouse migration is optional. Use Tableau for the BI exercise when accessible; a local chart or exported view keeps progress possible otherwise. These are recommended learning choices, not claims about the team's internal architecture.
+**Optional exercises after the core works:** one revenue bridge, one supported CRM opportunity, a Tableau view, a small Snowflake port, or a constrained AI-assisted analysis. Choose the exercise that closes an actual learning gap. dbt requires a model graph that benefits from it; an API requires a live consumer. A full warehouse migration, streaming stack, orchestration cluster, and deployed assistant are outside the core.
 
-Reuse the existing frontend only after inspecting its code and confirming that it can consume the governed outputs. The original plan mentions it, but no prototype was supplied here.
+Spend a bounded learning session on Snowflake roles, warehouses, query history, and cost controls if that is unfamiliar. Port one validated query only if useful. These are learning choices, not claims about the team's internal architecture. A reused frontend is likewise optional; no existing prototype was supplied.
 
 ## 4. Decision requirements before coding
 
@@ -89,7 +85,7 @@ Prepare two handoffs: a business-facing brief and a technical contract explainin
 
 ## 5. Source contracts and fixture design
 
-Start with 10–20 accounts and 56 business dates, enough for equal-length comparisons and several campaign endings. Use a fixed seed. Separate inputs from expected outputs so scenario checks do not simply reproduce the rule implementation.
+Use the default commercial profile: 1,000 fictional accounts, 5,000 campaigns, and 56 calendar dates, with normal-day simulated spend near $36.7 million. Use a fixed seed and a separate 10-account unit profile for fast tests. The financial reference and aggregate-versus-event distinction are documented in [SCALE_OVERVIEW.md](outputs/SCALE_OVERVIEW.md). Account/campaign counts and CPMs are synthetic design choices, not reported TTD facts. Separate inputs from expected outputs so scenario checks do not simply reproduce the rule implementation.
 
 | Source | Grain / natural key | Required context |
 | --- | --- | --- |
@@ -109,7 +105,7 @@ The coverage manifest also lists expected active campaign/channel keys. Delivery
 
 **File correction rule:** a delivery file is a complete snapshot for its declared business date and channel. An accepted newer version replaces that partition, including removal of omitted rows. Keep every raw version. Do not treat a corrected snapshot as an append or as an unspecified row-level patch.
 
-Store checksum, file name, source version, partition, received time, row count, status, and error in the run ledger. Replay of the same checksum is a no-op. Stage and validate before accepting a partition. A mart publication has its own batch ID and readiness state; publish only after every required input and check for that snapshot succeeds. Readers retain the last successful snapshot with a visible stale flag if the next run fails.
+Store checksum, file name, source version, partition, received time, row count, status, and error in the run ledger. Replay of the same checksum is a no-op. Validate the combined source state before accepting a partition. For the next milestone, each report records its generation time, period, source versions, and readiness. Publish only after required checks succeed; retain the last successful report with a visible stale flag if the next run fails. A simple report artifact is enough to start.
 
 ### Core scenario expectations
 
@@ -126,7 +122,7 @@ Later add Cedar Auto: a discovery suggestion requires a fictional CRM record exp
 
 ## 6. Commercial models and metrics
 
-Build account and campaign dimensions, delivery facts, effective budget plans, and an account-day mart. Aggregate each source to account-day before joining. Add revenue independently at its actual grain. Keep opportunities and cases as separate facts, aggregating only the context needed for a particular output.
+Query typed accepted sources and build one account-day view. Aggregate measures before joining; preserve effective budget dates and expected coverage. In an optional revenue exercise, use a separate authoritative revenue source at its actual grain. Aggregate opportunity or case context before any join that could multiply spend.
 
 Every metric entry contains a formula, unit, grain, eligible population, exclusions, date basis, owner, version, and freshness rule.
 
@@ -153,34 +149,33 @@ Revenue change = (S1 - S0) × Y0 + S1 × (Y1 - Y0)
 
 This ordering assigns the interaction term to yield. Label it a descriptive decomposition; mix, fees, and timing can affect yield. It is not a causal explanation or a claim about TTD's pricing. Keep zero-spend cases in a separate reconciliation category. Do not produce channel revenue unless a source or an explicit allocation model supports it.
 
-## 7. Explainable signal and review workflow
+## 7. Explainable signals and optional review pilot
 
-Begin with a transparent fictional rule: prior seven-day spend at least $1,000, current spend at least 20% lower, absolute decline at least $500, complete data, positive planned spend in both periods, current planned spend at least 90% of prior, and current pacing at least 10 percentage points below prior. Accounts with larger planned reductions go to contextual review rather than this automatic unexpected-decline rule. Flight endings with no current plan are planned changes. These values are starting parameters for experimentation; they deliberately narrow the first rule to relatively stable plans.
+Begin with a transparent fictional rule: prior seven-day spend at least $50,000, current spend at least 20% lower, absolute decline at least $10,000, complete data, positive planned spend in both periods, current planned spend at least 90% of prior, and current pacing at least 10 percentage points below prior. Accounts with larger planned reductions go to contextual review rather than this automatic unexpected-decline rule. Flight endings with no current plan are planned changes. These values are starting parameters for experimentation; they deliberately narrow the first rule to relatively stable plans.
 
 Sort eligible signals by observed dollar decline, with reason codes visible. Cap the daily queue at the configured review capacity. Do not call the rank a churn probability or recovered-revenue estimate.
 
 Each output includes account, owner, observation, both periods, actual/planned spend, completeness, rule version, evidence reference, uncertainty, and next check. For example: ask the owner to inspect active-campaign constraints after confirming the budget has not changed; client outreach remains a human decision.
 
-Persist `new -> reviewed -> acted_on / dismissed`, with reviewer, timestamp, note, and dismissal reason. Maintain a stable account/rule/episode identifier so reruns do not create duplicate work. Record changed evidence and resolution; reopening requires a documented new episode policy.
+If a review pilot is added, persist `new -> reviewed -> acted_on / dismissed`, with reviewer, timestamp, note, and dismissal reason. Maintain a stable account/rule/episode identifier so reruns do not create duplicate work. Record changed evidence and resolution; reopening requires a documented new episode policy.
 
-Measure eligible signals, queue delivery, reviews, time to review, usefulness, actions, and dismissals. State each denominator. Synthetic fixtures measure expected classification and routing; simulated review events only verify instrumentation. Real adoption requires a user pilot. Spend recovery after review remains an observational result.
+In a review pilot, measure eligible signals, queue delivery, reviews, time to review, usefulness, actions, and dismissals. State each denominator. Synthetic fixtures measure expected classification and routing; simulated review events only verify instrumentation. Real adoption requires a user pilot. Spend recovery after review remains an observational result.
 
 ## 8. Milestones and acceptance gates
 
 | Milestone | Deliverable | Completion evidence |
 | --- | --- | --- |
-| M0: decision and contracts | Brief, four contracts, six scenario expectations | Can explain who acts, what evidence is needed, and when to suppress a signal |
-| M1: trustworthy slice | Generator, loader, SQL mart | Duplicate replay, correction/removal, failure recovery, missing, and zero scenarios behave correctly |
+| M0: decision and contracts — complete | Brief, four contracts, six scenario expectations | Can explain who acts, what evidence is needed, and when to suppress a signal |
+| M1: trustworthy slice — complete | Generator, loader, account-day SQL view | Duplicate replay, correction/removal, failure recovery, missing, and zero scenarios behave correctly |
 | M2: useful queue | Repeatable daily CSV/Markdown output and account brief | Planned ending suppressed; actual decline explained; every item has owner, evidence, and next check |
-| M3: revenue and context | Revenue bridge, CRM snapshots, persistent review events | Source totals reconcile; cohorts and bridge reconcile; no join fanout or future-context leakage |
-| M4A: analyst branch | BI view, threshold study, two-page decision memo | Same governed metrics; burden/coverage tradeoffs clear; limitations and next decision explicit |
-| M4E: engineer branch | dbt models, container setup, CI, API/release demo, runbook | Clean setup works; automated checks gate publication; failed release/refresh recovery demonstrated |
+| Portfolio presentation — implemented | Repository, README, static interactive site | Sample reconciles; published site works on desktop and mobile |
+| Optional follow-up | Choose one revenue, CRM, BI, or warehouse learning exercise | New analysis reconciles and answers a defined question |
 
-Run checks that protect business meaning: source-to-mart reconciliation to documented currency precision, unique keys, valid relationships, ratio aggregation, coverage gating, budget effective dates, replay/correction behavior, and scenario outputs. A source check failure must block new publication. CI for the engineering branch must run a small integration fixture through ingestion, modeling, and publication.
+Run checks that protect business meaning: source-to-output reconciliation to documented currency precision, unique keys, valid relationships, ratio aggregation, coverage gating, budget effective dates, replay/correction behavior, and scenario outputs. A source check failure must block new publication. CI runs a small PostgreSQL integration fixture and reproduces the commercial sample before deploying the static walkthrough. Extend it to report publication when M2 exists.
 
-For the engineering branch, demonstrate execution from a clean local environment, a scheduled or repeatable batch trigger, structured logs, run status, and freshness warning. Document how to restore the last successful mart after a failed refresh or code change. Benchmark a larger generated dataset and record actual timings/query plans; set a performance target based on that baseline. A local container release is a valid preparation exercise, but does not demonstrate operating a production cloud service.
+Demonstrate a clean local run, meaningful failure and retry, readable run status, and a short explanation of stale evidence. Record actual timings for the larger commercial profile. Add a repeatable report command in M2; scheduling can follow when cadence needs it. A local container and static website do not demonstrate operating a production cloud intelligence service.
 
-The optional API initially needs portfolio summary, account evidence, priorities, metric definitions, and review events. Return snapshot ID, period, scope, exclusions, and freshness. Any reused dashboard must match SQL outputs under identical filters. Add scope enforcement and authorization tests before a multi-user extension.
+Keep API endpoints, persistent review storage, and multi-user access enforcement as optional follow-ups. A live consumer would justify the first; a real review pilot would justify the second. The static walkthrough is a portfolio explanation rather than a live operating tool.
 
 ## 9. Time plan
 
@@ -195,22 +190,13 @@ Keep the original cadence of four 30–60 minute sessions weekly as an assumptio
 
 If a milestone takes longer, extend the calendar or reduce source breadth. Keep the correctness gates. If setup consumes week one, deliver a reviewed SQL/fixture exercise first and shift ingestion into the next week.
 
-Planning estimates for the whole revised scope, including the small core:
-
-| Scope | Estimated total focused effort | At 2–4 hours/week |
-| --- | --- | --- |
-| Minimal core M0–M2 | 8–16 hours if tools are familiar | About 4 weeks; extend if needed |
-| Shared foundation plus analyst branch | 24–36 hours | Roughly 6–18 weeks |
-| Shared foundation plus engineer branch | 32–48 hours | Roughly 8–24 weeks |
-| Both branches | 40–60 hours | Roughly 10–30 weeks |
-
-These are planning estimates, not delivery promises; tool learning and troubleshooting add time. If day one is close, finish one reliable decline investigation, a short decision memo, and the onboarding questions below before expanding infrastructure.
+Finish M2 and a five-minute walkthrough before expanding. Reserve a separate bounded session for any optional tool or domain exercise. The original estimate of 8–16 focused hours for the minimal core assumes familiar Python/SQL and working local tooling; it is a planning assumption, not a delivery promise. Retire an optional exercise if it does not improve the business explanation or expose a useful failure case.
 
 ## 10. AI practice and optional assistant
 
 During the core, use an AI tool for one bounded task, such as proposing reconciliation SQL or drafting a metric definition. Save the proposal, independently verified result, errors found, and final correction. This practices validation without delaying the workflow.
 
-An optional assistant follows validated marts and stable interfaces. Constrain it to account summaries, revenue changes, priority lists, and metric definitions. Require structured tool results with scope, period, freshness, and evidence. The interface should clarify ambiguous revenue terms and disclose incomplete data.
+An optional assistant follows validated queries and stable interfaces. Constrain it to account summaries, revenue changes, priority lists, and metric definitions. Require structured tool results with scope, period, freshness, and evidence. The interface should clarify ambiguous revenue terms and disclose incomplete data.
 
 Evaluate at least ten fixed questions covering correct arithmetic, ambiguous periods/metrics, missing data, unsupported causal claims, tool failures, and unauthorized scope. Validate numerical assertions against trusted expected answers. Enforce scope in the service, rather than relying on the assistant's instructions. Keep unrestricted raw SQL execution outside this extension.
 
@@ -231,4 +217,4 @@ Bring these questions into onboarding:
 7. What are the team's deployment, monitoring, access, and incident practices?
 8. Which existing assets should be reused before building anything new?
 
-The preparation package is complete when the chosen scope passes its gates and you can defend its assumptions and limitations. M0 and the first M1 slice now pass their checks. The next action is M2: define complete seven-day comparisons, generate the evidence-backed investigation queue, and gate published outputs on validation and freshness.
+The preparation package is complete when the chosen scope passes its gates and you can defend its assumptions and limitations. M0 and the first M1 slice now pass their checks. The next action is M2: define complete seven-day comparisons, generate the evidence-backed investigation queue, and publish a concise report only after validation, with freshness and source evidence visible.

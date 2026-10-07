@@ -1,15 +1,15 @@
 {
   "periods": {"prior_start": "2026-08-18", "prior_end": "2026-08-24", "current_start": "2026-08-25", "current_end": "2026-08-31"},
   "accounts": {
-    "atlas": {"prior_spend": "2800.00", "current_spend": "1050.00", "current_plan": "3500.00", "next_classification": "commercial_investigation"},
-    "beacon": {"prior_spend": "2800.00", "current_spend": "0.00", "current_plan": "0.00", "next_classification": "planned_change"},
-    "harbor": {"prior_spend": "2800.00", "current_spend": null, "current_plan": "3500.00", "next_classification": "data_investigation"},
-    "maple": {"prior_spend": "2800.00", "current_spend": "0.00", "current_plan": "3500.00", "next_classification": "commercial_investigation"}
+    "atlas": {"prior_spend": "2800000.00", "current_spend": "1050000.00", "current_plan": "3500000.00", "next_classification": "commercial_investigation"},
+    "beacon": {"prior_spend": "2800000.00", "current_spend": "0.00", "current_plan": "0.00", "next_classification": "planned_change"},
+    "harbor": {"prior_spend": "2800000.00", "current_spend": null, "current_plan": "3500000.00", "next_classification": "data_investigation"},
+    "maple": {"prior_spend": "2800000.00", "current_spend": "0.00", "current_plan": "3500000.00", "next_classification": "commercial_investigation"}
   },
   "events": {
     "duplicate_file": "No new raw file; unchanged totals and current pointers",
-    "correct_atlas": {"account_id": "atlas", "business_date": "2026-08-31", "before": "150.00", "after": "400.00", "period_after": "1300.00"},
-    "late_harbor": {"account_id": "harbor", "business_date": "2026-08-31", "before": null, "after": "400.00", "period_after": "2800.00"},
+    "correct_atlas": {"account_id": "atlas", "business_date": "2026-08-31", "before": "150000.00", "after": "400000.00", "period_after": "1300000.00"},
+    "late_harbor": {"account_id": "harbor", "business_date": "2026-08-31", "before": null, "after": "400000.00", "period_after": "2800000.00"},
     "retire_atlas_key": "A jointly corrected budget, manifest, and delivery removes the last-day key; last-day spend becomes inactive zero; raw history remains"
   }
 }

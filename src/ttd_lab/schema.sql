@@ -72,7 +72,14 @@ WHERE f.source = 'delivery';
 
 -- This is a working view of accepted source state, not a published snapshot.
 CREATE OR REPLACE VIEW lab.account_day_working AS
-WITH required AS (
+WITH expected AS MATERIALIZED (
+    -- Expand each coverage key once before joining it to a budget. Without this
+    -- boundary, JSON cardinality estimates can repeatedly expand every key for
+    -- every budget in the same channel, which is expensive on larger fixtures.
+    SELECT * FROM lab.expected_delivery
+), plans AS MATERIALIZED (
+    SELECT * FROM lab.budgets
+), required AS (
     SELECT e.account_id, e.business_date, COUNT(*) AS expected_keys,
            COUNT(DISTINCT e.partition_key) FILTER (WHERE f.file_id IS NULL) AS missing_partitions,
            SUM(b.planned_daily_spend_usd) AS planned_spend_usd,
@@ -80,8 +87,8 @@ WITH required AS (
                'coverage_file_id', e.coverage_file_id, 'budget_file_id', b.source_file_id,
                'delivery_file_id', f.file_id, 'delivery_version', f.source_version)
                ORDER BY e.channel, e.campaign_id) AS evidence
-    FROM lab.expected_delivery e
-    JOIN lab.budgets b ON b.campaign_id = e.campaign_id AND b.account_id = e.account_id
+    FROM expected e
+    JOIN plans b ON b.campaign_id = e.campaign_id AND b.account_id = e.account_id
       AND b.channel = e.channel AND e.business_date BETWEEN b.effective_from AND b.effective_to
       AND e.business_date BETWEEN b.flight_start AND b.flight_end
     LEFT JOIN lab.accepted_files f ON f.source = 'delivery' AND f.partition_key = e.partition_key

@@ -1,0 +1,2241 @@
+{
+  "verified_on": "2026-10-07",
+  "scope": "Verified synthetic baseline; historical sample, not a live database",
+  "periods": {
+    "prior_start": "2026-08-18",
+    "prior_end": "2026-08-24",
+    "current_start": "2026-08-25",
+    "current_end": "2026-08-31"
+  },
+  "scale": {
+    "account_day_rows": 56000,
+    "accounts": 1000,
+    "baseline_files": 170,
+    "baseline_paid_impressions": 338991332198,
+    "baseline_spend_usd": "2047582442.77",
+    "business_dates": 56,
+    "calibrated_normal_day_spend_usd": "36712328.76",
+    "campaigns": 5000,
+    "delivery_rows": 279960,
+    "fictional_cpm_usd": {
+      "audio": "12.00",
+      "ctv": "25.00",
+      "display": "4.00"
+    },
+    "profile": "commercial",
+    "scale_reference": {
+      "annual_average_daily_gross_spend_usd": "36712328.76",
+      "reported_gross_spend_usd": 13400000000,
+      "source_url": "https://investors.thetradedesk.com/news-and-events/news/news-details/2026/The-Trade-Desk-Reports-Fourth-Quarter-and-Fiscal-Year-2025-Financial-Results/default.aspx",
+      "year": 2025
+    },
+    "scope": "Synthetic daily campaign aggregates; financial scale proxy, not TTD event throughput or actual accounts",
+    "seed": 42
+  },
+  "accounts": [
+    {
+      "id": "atlas",
+      "name": "Atlas Retail",
+      "owner": "owner-1",
+      "expected_route": "commercial_investigation",
+      "days": [
+        {
+          "date": "2026-08-18",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-21",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-22",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-23",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-31",
+          "spend_cents": 15000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beacon",
+      "name": "Beacon Travel",
+      "owner": "owner-2",
+      "expected_route": "planned_change",
+      "days": [
+        {
+          "date": "2026-08-18",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 131,
+              "delivery_version": 1,
+              "partition": "2026-08-18:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 131,
+              "delivery_version": 1,
+              "partition": "2026-08-18:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 131,
+              "delivery_version": 1,
+              "partition": "2026-08-18:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 131,
+              "delivery_version": 1,
+              "partition": "2026-08-18:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 131,
+              "delivery_version": 1,
+              "partition": "2026-08-18:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 134,
+              "delivery_version": 1,
+              "partition": "2026-08-19:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 134,
+              "delivery_version": 1,
+              "partition": "2026-08-19:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 134,
+              "delivery_version": 1,
+              "partition": "2026-08-19:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 134,
+              "delivery_version": 1,
+              "partition": "2026-08-19:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 134,
+              "delivery_version": 1,
+              "partition": "2026-08-19:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 137,
+              "delivery_version": 1,
+              "partition": "2026-08-20:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 137,
+              "delivery_version": 1,
+              "partition": "2026-08-20:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 137,
+              "delivery_version": 1,
+              "partition": "2026-08-20:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 137,
+              "delivery_version": 1,
+              "partition": "2026-08-20:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 137,
+              "delivery_version": 1,
+              "partition": "2026-08-20:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-21",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 140,
+              "delivery_version": 1,
+              "partition": "2026-08-21:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 140,
+              "delivery_version": 1,
+              "partition": "2026-08-21:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 140,
+              "delivery_version": 1,
+              "partition": "2026-08-21:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 140,
+              "delivery_version": 1,
+              "partition": "2026-08-21:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 140,
+              "delivery_version": 1,
+              "partition": "2026-08-21:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-22",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 143,
+              "delivery_version": 1,
+              "partition": "2026-08-22:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 143,
+              "delivery_version": 1,
+              "partition": "2026-08-22:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 143,
+              "delivery_version": 1,
+              "partition": "2026-08-22:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 143,
+              "delivery_version": 1,
+              "partition": "2026-08-22:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 143,
+              "delivery_version": 1,
+              "partition": "2026-08-22:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-23",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 146,
+              "delivery_version": 1,
+              "partition": "2026-08-23:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 146,
+              "delivery_version": 1,
+              "partition": "2026-08-23:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 146,
+              "delivery_version": 1,
+              "partition": "2026-08-23:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 146,
+              "delivery_version": 1,
+              "partition": "2026-08-23:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 146,
+              "delivery_version": 1,
+              "partition": "2026-08-23:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 149,
+              "delivery_version": 1,
+              "partition": "2026-08-24:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 149,
+              "delivery_version": 1,
+              "partition": "2026-08-24:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 149,
+              "delivery_version": 1,
+              "partition": "2026-08-24:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 149,
+              "delivery_version": 1,
+              "partition": "2026-08-24:ctv"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 149,
+              "delivery_version": 1,
+              "partition": "2026-08-24:ctv"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-26",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-27",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-28",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-29",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-30",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        },
+        {
+          "date": "2026-08-31",
+          "spend_cents": 0,
+          "plan_cents": 0,
+          "state": "inactive",
+          "evidence": []
+        }
+      ]
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor Foods",
+      "owner": "owner-3",
+      "expected_route": "data_investigation",
+      "days": [
+        {
+          "date": "2026-08-18",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 130,
+              "delivery_version": 1,
+              "partition": "2026-08-18:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 130,
+              "delivery_version": 1,
+              "partition": "2026-08-18:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 130,
+              "delivery_version": 1,
+              "partition": "2026-08-18:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 130,
+              "delivery_version": 1,
+              "partition": "2026-08-18:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 130,
+              "delivery_version": 1,
+              "partition": "2026-08-18:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 133,
+              "delivery_version": 1,
+              "partition": "2026-08-19:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 133,
+              "delivery_version": 1,
+              "partition": "2026-08-19:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 133,
+              "delivery_version": 1,
+              "partition": "2026-08-19:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 133,
+              "delivery_version": 1,
+              "partition": "2026-08-19:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 133,
+              "delivery_version": 1,
+              "partition": "2026-08-19:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 136,
+              "delivery_version": 1,
+              "partition": "2026-08-20:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 136,
+              "delivery_version": 1,
+              "partition": "2026-08-20:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 136,
+              "delivery_version": 1,
+              "partition": "2026-08-20:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 136,
+              "delivery_version": 1,
+              "partition": "2026-08-20:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 136,
+              "delivery_version": 1,
+              "partition": "2026-08-20:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-21",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 139,
+              "delivery_version": 1,
+              "partition": "2026-08-21:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 139,
+              "delivery_version": 1,
+              "partition": "2026-08-21:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 139,
+              "delivery_version": 1,
+              "partition": "2026-08-21:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 139,
+              "delivery_version": 1,
+              "partition": "2026-08-21:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 139,
+              "delivery_version": 1,
+              "partition": "2026-08-21:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-22",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 142,
+              "delivery_version": 1,
+              "partition": "2026-08-22:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 142,
+              "delivery_version": 1,
+              "partition": "2026-08-22:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 142,
+              "delivery_version": 1,
+              "partition": "2026-08-22:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 142,
+              "delivery_version": 1,
+              "partition": "2026-08-22:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 142,
+              "delivery_version": 1,
+              "partition": "2026-08-22:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-23",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 145,
+              "delivery_version": 1,
+              "partition": "2026-08-23:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 145,
+              "delivery_version": 1,
+              "partition": "2026-08-23:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 145,
+              "delivery_version": 1,
+              "partition": "2026-08-23:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 145,
+              "delivery_version": 1,
+              "partition": "2026-08-23:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 145,
+              "delivery_version": 1,
+              "partition": "2026-08-23:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 148,
+              "delivery_version": 1,
+              "partition": "2026-08-24:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 148,
+              "delivery_version": 1,
+              "partition": "2026-08-24:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 148,
+              "delivery_version": 1,
+              "partition": "2026-08-24:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 148,
+              "delivery_version": 1,
+              "partition": "2026-08-24:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 148,
+              "delivery_version": 1,
+              "partition": "2026-08-24:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 151,
+              "delivery_version": 1,
+              "partition": "2026-08-25:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 151,
+              "delivery_version": 1,
+              "partition": "2026-08-25:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 151,
+              "delivery_version": 1,
+              "partition": "2026-08-25:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 151,
+              "delivery_version": 1,
+              "partition": "2026-08-25:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 151,
+              "delivery_version": 1,
+              "partition": "2026-08-25:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 154,
+              "delivery_version": 1,
+              "partition": "2026-08-26:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 154,
+              "delivery_version": 1,
+              "partition": "2026-08-26:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 154,
+              "delivery_version": 1,
+              "partition": "2026-08-26:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 154,
+              "delivery_version": 1,
+              "partition": "2026-08-26:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 154,
+              "delivery_version": 1,
+              "partition": "2026-08-26:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 157,
+              "delivery_version": 1,
+              "partition": "2026-08-27:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 157,
+              "delivery_version": 1,
+              "partition": "2026-08-27:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 157,
+              "delivery_version": 1,
+              "partition": "2026-08-27:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 157,
+              "delivery_version": 1,
+              "partition": "2026-08-27:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 157,
+              "delivery_version": 1,
+              "partition": "2026-08-27:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 160,
+              "delivery_version": 1,
+              "partition": "2026-08-28:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 160,
+              "delivery_version": 1,
+              "partition": "2026-08-28:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 160,
+              "delivery_version": 1,
+              "partition": "2026-08-28:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 160,
+              "delivery_version": 1,
+              "partition": "2026-08-28:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 160,
+              "delivery_version": 1,
+              "partition": "2026-08-28:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 163,
+              "delivery_version": 1,
+              "partition": "2026-08-29:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 163,
+              "delivery_version": 1,
+              "partition": "2026-08-29:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 163,
+              "delivery_version": 1,
+              "partition": "2026-08-29:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 163,
+              "delivery_version": 1,
+              "partition": "2026-08-29:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 163,
+              "delivery_version": 1,
+              "partition": "2026-08-29:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 166,
+              "delivery_version": 1,
+              "partition": "2026-08-30:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 166,
+              "delivery_version": 1,
+              "partition": "2026-08-30:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 166,
+              "delivery_version": 1,
+              "partition": "2026-08-30:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 166,
+              "delivery_version": 1,
+              "partition": "2026-08-30:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 166,
+              "delivery_version": 1,
+              "partition": "2026-08-30:audio"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-31",
+          "spend_cents": null,
+          "plan_cents": 50000000,
+          "state": "missing_delivery",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": null,
+              "delivery_version": null,
+              "partition": "2026-08-31:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": null,
+              "delivery_version": null,
+              "partition": "2026-08-31:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": null,
+              "delivery_version": null,
+              "partition": "2026-08-31:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": null,
+              "delivery_version": null,
+              "partition": "2026-08-31:audio"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": null,
+              "delivery_version": null,
+              "partition": "2026-08-31:audio"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maple",
+      "name": "Maple Goods",
+      "owner": "owner-4",
+      "expected_route": "commercial_investigation",
+      "days": [
+        {
+          "date": "2026-08-18",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 132,
+              "delivery_version": 1,
+              "partition": "2026-08-18:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-19",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 135,
+              "delivery_version": 1,
+              "partition": "2026-08-19:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 138,
+              "delivery_version": 1,
+              "partition": "2026-08-20:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-21",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 141,
+              "delivery_version": 1,
+              "partition": "2026-08-21:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-22",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 144,
+              "delivery_version": 1,
+              "partition": "2026-08-22:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-23",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 147,
+              "delivery_version": 1,
+              "partition": "2026-08-23:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-24",
+          "spend_cents": 40000000,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 150,
+              "delivery_version": 1,
+              "partition": "2026-08-24:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-25",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 153,
+              "delivery_version": 1,
+              "partition": "2026-08-25:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-26",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 156,
+              "delivery_version": 1,
+              "partition": "2026-08-26:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-27",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 159,
+              "delivery_version": 1,
+              "partition": "2026-08-27:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-28",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 162,
+              "delivery_version": 1,
+              "partition": "2026-08-28:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-29",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 165,
+              "delivery_version": 1,
+              "partition": "2026-08-29:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-30",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 168,
+              "delivery_version": 1,
+              "partition": "2026-08-30:display"
+            }
+          ]
+        },
+        {
+          "date": "2026-08-31",
+          "spend_cents": 0,
+          "plan_cents": 50000000,
+          "state": "complete",
+          "evidence": [
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            },
+            {
+              "budget_file_id": 2,
+              "coverage_file_id": 3,
+              "delivery_file_id": 170,
+              "delivery_version": 1,
+              "partition": "2026-08-31:display"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "events": {
+    "correct_atlas": {
+      "account_id": "atlas",
+      "date": "2026-08-31",
+      "spend_cents": 40000000,
+      "partition": "2026-08-31:display",
+      "version": 2
+    },
+    "late_harbor": {
+      "account_id": "harbor",
+      "date": "2026-08-31",
+      "spend_cents": 40000000,
+      "partition": "2026-08-31:audio",
+      "version": 1
+    }
+  }
+}

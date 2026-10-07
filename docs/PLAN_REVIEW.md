@@ -31,8 +31,14 @@ Avoid treating synthetic outcomes as evidence of commercial effectiveness. The g
 
 ## Scope decisions
 
-Keep daily batch processing, deterministic fictional data, Python, SQL, and a local PostgreSQL database. Use dbt when models become numerous enough to justify it. Defer service-case integration, renewal analysis, product telemetry, a large frontend, unrestricted agent behavior, and production CRM connections until the core works.
+Keep daily batch processing, deterministic fictional data, Python, SQL, and a local PostgreSQL database. Keep business logic in direct SQL views. Consider dbt only if a larger dependency graph later needs it. Defer service-case integration, renewal analysis, product telemetry, a large frontend, unrestricted agent behavior, and production CRM connections until the core works.
 
 The original document describes an existing frontend prototype. Its code was not attached, so frontend reuse remains a later assessment rather than a project dependency.
 
 The role-source notes and requirement mapping are in the revised plan. Exact listing availability could not be verified. The project prepares transferable skills and questions; it cannot guarantee familiarity with the team’s private systems on arrival.
+
+## October 7 scope update
+
+The current plan reduces platform breadth: Python ingestion, one PostgreSQL database, direct SQL views, and an investigation report. Source versions and a run ledger stay because replay, correction, and failure evidence require them. There is no required medallion structure, staging/fact/mart hierarchy, or separate analyst/engineer platform branch.
+
+The repository, README, and GitHub Pages walkthrough demonstrate the project clearly. The public site uses an independently reconciled synthetic sample; it does not claim a finished classifier or live review system. The core practices commercial reasoning and engineering reliability together. Snowflake, Tableau, dbt, APIs, CRM context, revenue analysis, and an assistant are optional exercises chosen for a concrete learning need.

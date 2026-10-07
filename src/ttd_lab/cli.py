@@ -13,8 +13,12 @@ def main():
     parser = argparse.ArgumentParser(description="Fictional commercial intelligence lab")
     commands = parser.add_subparsers(dest="command", required=True)
     fixture = commands.add_parser("generate", help="Generate fixed fictional inputs and correction events")
-    fixture.add_argument("--output", type=Path, default=Path("data/fixtures"))
+    fixture.add_argument("--output", type=Path)
     fixture.add_argument("--seed", type=int, default=42)
+    fixture.add_argument("--profile", choices=["commercial", "unit"], default="commercial")
+    fixture.add_argument("--accounts", type=int, help="Synthetic account count (commercial profile)")
+    fixture.add_argument("--campaigns-per-account", type=int)
+    fixture.add_argument("--days", type=int, default=56)
     validate = commands.add_parser("validate", help="Validate a complete source directory without a database")
     validate.add_argument("path", type=Path)
     commands.add_parser("init-db", help="Create lab schema and SQL views; preserves existing data")
@@ -25,7 +29,9 @@ def main():
     args = parser.parse_args()
     try:
         if args.command == "generate":
-            result = generate(args.output, args.seed)
+            destination = args.output or Path(f"data/fixtures-{args.profile}")
+            result = generate(destination, args.seed, args.profile, args.accounts,
+                              args.campaigns_per_account, args.days)
         elif args.command == "validate":
             documents = {}
             inputs = load_files(args.path)
@@ -38,7 +44,7 @@ def main():
             result = {"status": "valid", "files": len(inputs)}
         else:
             from .database import initialize, ingest, account_days
-            database_url = os.environ.get("LAB_DATABASE_URL", "postgresql://ttd_lab:ttd_lab_local@127.0.0.1:55432/ttd_lab")
+            database_url = os.environ.get("LAB_DATABASE_URL", "postgresql://ttd_lab:ttd_lab_local@127.0.0.1:55432/ttd_lab_scale")
             if args.command == "init-db":
                 initialize(database_url)
                 result = {"status": "schema_ready"}

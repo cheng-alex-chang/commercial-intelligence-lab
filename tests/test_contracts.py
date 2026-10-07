@@ -12,7 +12,7 @@ from ttd_lab.fixtures import generate
 @pytest.fixture(scope="module")
 def fixture_inputs(tmp_path_factory):
     root = tmp_path_factory.mktemp("sources")
-    generate(root)
+    generate(root, profile="unit")
     return root
 
 
@@ -23,7 +23,7 @@ def state(fixture_inputs):
 
 
 def test_fixed_seed_reproduces_exact_bytes(fixture_inputs, tmp_path):
-    generate(tmp_path)
+    generate(tmp_path, profile="unit")
     first = {str(p.relative_to(fixture_inputs)): p.read_bytes() for p in fixture_inputs.rglob("*.json")}
     second = {str(p.relative_to(tmp_path)): p.read_bytes() for p in tmp_path.rglob("*.json")}
     assert first == second

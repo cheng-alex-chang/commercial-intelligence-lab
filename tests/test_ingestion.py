@@ -25,7 +25,7 @@ def warehouse(tmp_path):
     with psycopg.connect(url, autocommit=True) as connection:
         connection.execute("DROP SCHEMA IF EXISTS lab CASCADE")
     database.initialize(url)
-    generate(tmp_path)
+    generate(tmp_path, profile="unit")
     database.ingest(url, tmp_path / "baseline")
     with psycopg.connect(url, autocommit=True) as connection:
         yield url, tmp_path, connection
@@ -65,19 +65,19 @@ def test_correction_retains_exact_old_bytes_and_old_replay_cannot_revert(warehou
     baseline = root / "baseline/delivery/2026-08-31_display_v1.json"
     before = baseline.read_bytes()
     database.ingest(url, root / "events/correct_atlas")
-    assert final_spend(con, "atlas") == Decimal("400")
-    assert value(con, "SELECT SUM(spend_usd) FROM lab.account_day_working WHERE account_id='atlas' AND business_date BETWEEN '2026-08-25' AND '2026-08-31'") == Decimal("1300")
+    assert final_spend(con, "atlas") == Decimal("400000")
+    assert value(con, "SELECT SUM(spend_usd) FROM lab.account_day_working WHERE account_id='atlas' AND business_date BETWEEN '2026-08-25' AND '2026-08-31'") == Decimal("1300000")
     stored = value(con, "SELECT raw_bytes FROM lab.raw_files WHERE checksum=%s", (hashlib.sha256(before).hexdigest(),))
     assert bytes(stored) == before
     database.ingest(url, baseline)
-    assert final_spend(con, "atlas") == Decimal("400")
+    assert final_spend(con, "atlas") == Decimal("400000")
     assert value(con, "SELECT COUNT(*) FROM lab.raw_files WHERE source='delivery' AND partition_key='2026-08-31:display'") == 2
 
 
 def test_late_file_recovers_missing_day(warehouse):
     url, root, con = warehouse
     database.ingest(url, root / "events/late_harbor")
-    assert final_spend(con, "harbor") == Decimal("400")
+    assert final_spend(con, "harbor") == Decimal("400000")
     assert value(con, "SELECT COUNT(*) FROM lab.account_day_working WHERE data_state='missing_delivery'") == 0
 
 
@@ -89,7 +89,7 @@ def test_same_version_different_bytes_rejected_and_failure_recorded(warehouse):
     bad.write_text(json.dumps(document))
     with pytest.raises(ContractError, match="Conflicting or stale"):
         database.ingest(url, bad)
-    assert final_spend(con, "atlas") == Decimal("150")
+    assert final_spend(con, "atlas") == Decimal("150000")
     assert value(con, "SELECT COUNT(*) FROM lab.raw_files") == 170
     assert value(con, "SELECT COUNT(*) FROM lab.ingestion_runs WHERE status='failed'") == 1
 
@@ -115,8 +115,25 @@ def test_failure_after_write_rolls_back_then_retry_recovers(warehouse, monkeypat
     with pytest.raises(RuntimeError, match="Injected failure"):
         database.ingest(url, root / "events/correct_atlas")
     assert value(con, "SELECT COUNT(*) FROM lab.raw_files") == 170
-    assert final_spend(con, "atlas") == Decimal("150")
+    assert final_spend(con, "atlas") == Decimal("150000")
     assert value(con, "SELECT COUNT(*) FROM lab.ingestion_runs WHERE status='failed'") == 1
     monkeypatch.setattr(database, "_write_file", original)
     database.ingest(url, root / "events/correct_atlas")
-    assert final_spend(con, "atlas") == Decimal("400")
+    assert final_spend(con, "atlas") == Decimal("400000")
+
+
+def test_multi_campaign_account_totals_do_not_fan_out(warehouse):
+    url, root, con = warehouse
+    con.execute("DROP SCHEMA lab CASCADE")  # Dedicated local test database only.
+    database.initialize(url)
+    dataset = root / "commercial"
+    summary = generate(dataset, profile="commercial", account_count=20,
+                       campaigns_per_account=3, days=14)
+    database.ingest(url, dataset / "baseline")
+    assert value(con, "SELECT COUNT(*) FROM lab.delivery") == summary["delivery_rows"]
+    assert value(con, "SELECT COUNT(*) FROM lab.account_day_working") == 280
+    assert final_spend(con, "atlas") == Decimal("150000")
+    assert value(con, "SELECT planned_spend_usd FROM lab.account_day_working WHERE account_id='atlas' AND business_date='2026-08-31'") == Decimal("500000")
+    assert value(con, "SELECT SUM(spend_usd) FROM lab.delivery") == value(con, "SELECT SUM(spend_usd) FROM lab.account_day_working")
+    database.ingest(url, dataset / "events/correct_atlas")
+    assert final_spend(con, "atlas") == Decimal("400000")

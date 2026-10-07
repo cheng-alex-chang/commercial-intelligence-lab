@@ -10,7 +10,7 @@ All entities, values, rules, and workflows are fictional preparation exercises.
 
 **Evidence:** two adjacent seven-day periods; observed advertiser spend; effective planned spend; account-level completeness; current owner; and source version references. Platform revenue is a different metric and is outside this first slice.
 
-**Initial rule for the next milestone:** prior spend >= $1,000; decline >= 20% and >= $500; complete evidence; positive planned spend in both periods; current plan >= 90% of prior; and pacing decline >= 10 percentage points. Rank by observed dollars declined and cap at five accounts. These are provisional learning parameters.
+**Initial rule for the next milestone:** prior spend >= $50,000; decline >= 20% and >= $10,000; complete evidence; positive planned spend in both periods; current plan >= 90% of prior; and pacing decline >= 10 percentage points. Rank by observed dollars declined and cap at five accounts. These are provisional learning parameters.
 
 **Routing:** complete unexpected declines go to the account owner. Missing expected delivery goes to the data reviewer. Ended flights with no current planned spend are planned changes. Observed zero spend remains zero; absent evidence remains unknown.
 
