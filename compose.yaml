@@ -1,0 +1,19 @@
+name: ttd-onboarding
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ttd_lab
+      POSTGRES_PASSWORD: ttd_lab_local
+      POSTGRES_DB: ttd_lab
+    ports:
+      - "127.0.0.1:55432:5432"
+    volumes:
+      - lab-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ttd_lab -d ttd_lab"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+volumes:
+  lab-postgres:
