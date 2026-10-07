@@ -52,7 +52,9 @@ jobs:
           ttd-lab load data/fixtures-commercial/baseline
           ttd-lab export
           python scripts/build_demo.py
-          git diff --exit-code -- site/demo.json
+          python scripts/build_report.py
+          git diff --exit-code -- site/demo.json site/reports
+          test -z "$(git ls-files --others --exclude-standard site/reports)"
 
   publish:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

@@ -9,7 +9,7 @@ A focused Python and SQL project for answering: **which accounts should an owner
 ![PostgreSQL 17](https://img.shields.io/badge/PostgreSQL-17-4169e1)
 ![Data: synthetic](https://img.shields.io/badge/Data-synthetic-cc502c)
 
-**[Explore the live walkthrough →](https://cheng-alex-chang.github.io/commercial-intelligence-lab/)** · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Project plan](PROJECT_PLAN.md)
+**[Read the executive briefing →](https://cheng-alex-chang.github.io/commercial-intelligence-lab/report.html)** · **[Explore the live walkthrough →](https://cheng-alex-chang.github.io/commercial-intelligence-lab/)** · [Architecture](docs/ARCHITECTURE.md) · [Verification](docs/VERIFICATION.md) · [Project plan](PROJECT_PLAN.md)
 
 The walkthrough lets you inspect four account cases, accept a sample source correction or late file, and trace the daily values to their source versions. It uses a verified historical sample; browser controls do not change a database.
 
@@ -24,7 +24,7 @@ Compare August 18–24 with August 25–31, 2026. Dollar amounts are fictional.
 | Harbor Foods | $2.80M | **Unknown** | $3.50M | Required delivery is missing. Locate the file before assessing a decline. |
 | Maple Goods | $2.80M | **$0 observed** | $3.50M | Complete explicit zero rows. Check pause or delivery constraints. |
 
-The scenario interpretations above are analytical examples, checked against independent expected totals. The automated daily classifier and ranked investigation queue are the next milestone. A spend decline alone does not establish churn risk, revenue loss, or a causal explanation.
+The scenario interpretations above are analytical examples, checked against independent expected totals. The executive briefing applies the rule across the full portfolio and publishes a capacity-limited owner-review queue. Operational scheduling and freshness cutoffs remain future work. A spend decline alone does not establish churn risk, revenue loss, or a causal explanation.
 
 ## Architecture
 
@@ -33,7 +33,7 @@ flowchart LR
     A[Accounts · budgets · coverage · delivery] --> B[Python: validate and accept atomically]
     B --> C[PostgreSQL: source versions and SQL views]
     C --> D[Account-day CSV]
-    D --> E[Investigation report: next milestone]
+    D --> E[Shared comparisons → executive website + CSV]
     D --> F[Verified sample → GitHub Pages]
 ```
 
@@ -56,9 +56,27 @@ Extra platforms are optional learning exercises. Read the [architecture decision
 - Atomic source acceptance, checksum replay, version conflict rejection, and a failed-run ledger.
 - Exact source history; accepting a newer file replaces its entire partition. Replaying an accepted older file cannot revert it.
 - Account-day SQL that distinguishes missing delivery, explicit zero, and inactive campaigns, with source references.
-- A reconciled CSV export, 23 passing tests including 8 PostgreSQL integration checks, and a reproducible public sample.
+- A reconciled CSV export, 31 passing tests including 9 PostgreSQL integration checks, and a reproducible public sample.
 
-**Next:** two-period eligibility, a capacity-limited investigation report with owner/evidence/next check, successful-publication checks, and visible freshness. Persistent review events and production scheduling remain optional follow-ups.
+**Implemented report:** complete-period eligibility, explainable routing, five-account review capacity, a reconciled portfolio movement bridge, and immutable report snapshots shared by the executive website and account-comparison CSV.
+
+**Next:** operational freshness cutoffs and a short decision memo. Persistent review events and production scheduling remain optional follow-ups.
+
+## Executive briefing
+
+[Open the website report](https://cheng-alex-chang.github.io/commercial-intelligence-lab/report.html). It presents the decision first: comparable portfolio movement, accounts needing owner review, planned changes, and evidence gaps. Expand any flagged account to inspect its period totals and source references. Print/save PDF uses the browser's print dialog with a dedicated print layout. The CSV is an optional download from the same snapshot.
+
+The baseline compares **999 complete accounts** out of 1,000: spend moves from **$254,176,513.25 to $246,805,280.36**, a **$7,371,232.89 decline**. Maple and Atlas contribute **$4.55M** of declines meeting the review rule. Beacon's planned ending contributes **$2.80M**. Remaining complete accounts contribute **$21,232.89** of net decline. Harbor is excluded from both totals; its current-period spend remains unknown.
+
+```sh
+# Read accepted PostgreSQL data and publish a local report snapshot.
+.venv/bin/ttd-lab report --end-date 2026-08-31 --output outputs/reports
+# To preview that snapshot in the executive website:
+.venv/bin/ttd-lab report --end-date 2026-08-31 --output site/reports
+python3 -m http.server 8000 --directory site
+```
+
+Open [localhost:8000/report.html](http://localhost:8000/report.html). The Python comparison logic owns eligibility, ranking, and totals; the browser formats its results. Successful publication writes a content-addressed JSON/CSV snapshot, then atomically advances a small pointer. Failed builds preserve the last successful pointer. The public page clearly labels its historical synthetic period; it does not claim current operational freshness. [Definitions and limits](docs/EXECUTIVE_REPORT.md).
 
 ## Scale, stated precisely
 
@@ -131,10 +149,11 @@ After generating and exporting a **fresh baseline**:
 
 ```sh
 .venv/bin/python scripts/build_demo.py
+.venv/bin/python scripts/build_report.py
 python3 -m http.server 8000 --directory site
 ```
 
-Open [localhost:8000](http://localhost:8000). The builder reconciles the full export to the scale manifest and independently specified scenario totals before writing `site/demo.json`. It rejects corrected or incompatible exports. GitHub Actions repeats tests and baseline reproduction, then deploys the static site only after verification succeeds.
+Open [localhost:8000](http://localhost:8000). The builder reconciles the full export to the scale manifest and independently specified scenario totals before writing `site/demo.json`. It rejects corrected or incompatible exports. GitHub Actions repeats tests and baseline reproduction, reproduces both public samples, then deploys the static site only after verification succeeds.
 
 ### Change row volume
 
@@ -152,7 +171,7 @@ src/ttd_lab/        Generator, contracts, ingestion, CLI, SQL views
 sql/               Queries to inspect coverage and period totals
 tests/             Independent expectations and correctness checks
 scripts/           Reconciled public sample builder
-site/              Static GitHub Pages walkthrough and verified sample
+site/              Static walkthrough, executive briefing, and report snapshots
 docs/              Decision brief, contracts, architecture, verification
 outputs/           Learning exercises and scale explanation
 .github/workflows/ Verification and Pages publication

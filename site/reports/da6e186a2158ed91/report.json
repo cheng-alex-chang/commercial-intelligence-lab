@@ -1,0 +1,636 @@
+{
+  "capacity": 5,
+  "cohorts": [
+    {
+      "accounts": 2,
+      "change_cents": -455000000,
+      "current_spend_cents": 105000000,
+      "prior_spend_cents": 560000000,
+      "route": "commercial_investigation"
+    },
+    {
+      "accounts": 996,
+      "change_cents": -2123289,
+      "current_spend_cents": 24575528036,
+      "prior_spend_cents": 24577651325,
+      "route": "no_decline_signal"
+    },
+    {
+      "accounts": 1,
+      "change_cents": -280000000,
+      "current_spend_cents": 0,
+      "prior_spend_cents": 280000000,
+      "route": "planned_change"
+    }
+  ],
+  "daily": [
+    {
+      "current_date": "2026-08-25",
+      "current_spend_cents": 3526252610,
+      "prior_date": "2026-08-18",
+      "prior_spend_cents": 3613611500
+    },
+    {
+      "current_date": "2026-08-26",
+      "current_spend_cents": 3523477102,
+      "prior_date": "2026-08-19",
+      "prior_spend_cents": 3637951736
+    },
+    {
+      "current_date": "2026-08-27",
+      "current_spend_cents": 3516507180,
+      "prior_date": "2026-08-20",
+      "prior_spend_cents": 3639165207
+    },
+    {
+      "current_date": "2026-08-28",
+      "current_spend_cents": 3528868934,
+      "prior_date": "2026-08-21",
+      "prior_spend_cents": 3632873582
+    },
+    {
+      "current_date": "2026-08-29",
+      "current_spend_cents": 3516612823,
+      "prior_date": "2026-08-22",
+      "prior_spend_cents": 3627174207
+    },
+    {
+      "current_date": "2026-08-30",
+      "current_spend_cents": 3536819249,
+      "prior_date": "2026-08-23",
+      "prior_spend_cents": 3620398513
+    },
+    {
+      "current_date": "2026-08-31",
+      "current_spend_cents": 3531990138,
+      "prior_date": "2026-08-24",
+      "prior_spend_cents": 3646476580
+    }
+  ],
+  "data_issues": [
+    {
+      "change_cents": null,
+      "current": {
+        "known_spend_cents": 240000000,
+        "plan_cents": 350000000,
+        "spend_cents": null
+      },
+      "evidence": [
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-18",
+          "delivery_file_id": 130,
+          "delivery_version": 1,
+          "partition": "2026-08-18:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-19",
+          "delivery_file_id": 133,
+          "delivery_version": 1,
+          "partition": "2026-08-19:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-20",
+          "delivery_file_id": 136,
+          "delivery_version": 1,
+          "partition": "2026-08-20:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-21",
+          "delivery_file_id": 139,
+          "delivery_version": 1,
+          "partition": "2026-08-21:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-22",
+          "delivery_file_id": 142,
+          "delivery_version": 1,
+          "partition": "2026-08-22:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-23",
+          "delivery_file_id": 145,
+          "delivery_version": 1,
+          "partition": "2026-08-23:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-24",
+          "delivery_file_id": 148,
+          "delivery_version": 1,
+          "partition": "2026-08-24:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-25",
+          "delivery_file_id": 151,
+          "delivery_version": 1,
+          "partition": "2026-08-25:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-26",
+          "delivery_file_id": 154,
+          "delivery_version": 1,
+          "partition": "2026-08-26:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-27",
+          "delivery_file_id": 157,
+          "delivery_version": 1,
+          "partition": "2026-08-27:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-28",
+          "delivery_file_id": 160,
+          "delivery_version": 1,
+          "partition": "2026-08-28:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-29",
+          "delivery_file_id": 163,
+          "delivery_version": 1,
+          "partition": "2026-08-29:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-30",
+          "delivery_file_id": 166,
+          "delivery_version": 1,
+          "partition": "2026-08-30:audio"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-31",
+          "delivery_file_id": null,
+          "delivery_version": null,
+          "partition": "2026-08-31:audio"
+        }
+      ],
+      "id": "harbor",
+      "missing_dates": [
+        "2026-08-31"
+      ],
+      "name": "Harbor Foods",
+      "next_check": "Data reviewer: locate missing delivery or coverage, validate expected campaign keys, and rerun the comparison before making a commercial assessment.",
+      "owner": "owner-3",
+      "prior": {
+        "known_spend_cents": 280000000,
+        "plan_cents": 350000000,
+        "spend_cents": 280000000
+      },
+      "route": "data_investigation"
+    }
+  ],
+  "periods": {
+    "current_end": "2026-08-31",
+    "current_start": "2026-08-25",
+    "prior_end": "2026-08-24",
+    "prior_start": "2026-08-18"
+  },
+  "planned_changes": [
+    {
+      "change_cents": -280000000,
+      "current": {
+        "known_spend_cents": 0,
+        "plan_cents": 0,
+        "spend_cents": 0
+      },
+      "evidence": [
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-18",
+          "delivery_file_id": 131,
+          "delivery_version": 1,
+          "partition": "2026-08-18:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-19",
+          "delivery_file_id": 134,
+          "delivery_version": 1,
+          "partition": "2026-08-19:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-20",
+          "delivery_file_id": 137,
+          "delivery_version": 1,
+          "partition": "2026-08-20:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-21",
+          "delivery_file_id": 140,
+          "delivery_version": 1,
+          "partition": "2026-08-21:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-22",
+          "delivery_file_id": 143,
+          "delivery_version": 1,
+          "partition": "2026-08-22:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-23",
+          "delivery_file_id": 146,
+          "delivery_version": 1,
+          "partition": "2026-08-23:ctv"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-24",
+          "delivery_file_id": 149,
+          "delivery_version": 1,
+          "partition": "2026-08-24:ctv"
+        }
+      ],
+      "id": "beacon",
+      "missing_dates": [],
+      "name": "Beacon Travel",
+      "next_check": "Account owner: confirm the agreed campaign flight schedule; no unexpected-decline escalation is supported.",
+      "owner": "owner-2",
+      "prior": {
+        "known_spend_cents": 280000000,
+        "plan_cents": 350000000,
+        "spend_cents": 280000000
+      },
+      "route": "planned_change"
+    }
+  ],
+  "queue": [
+    {
+      "change_cents": -280000000,
+      "current": {
+        "known_spend_cents": 0,
+        "plan_cents": 350000000,
+        "spend_cents": 0
+      },
+      "evidence": [
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-18",
+          "delivery_file_id": 132,
+          "delivery_version": 1,
+          "partition": "2026-08-18:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-19",
+          "delivery_file_id": 135,
+          "delivery_version": 1,
+          "partition": "2026-08-19:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-20",
+          "delivery_file_id": 138,
+          "delivery_version": 1,
+          "partition": "2026-08-20:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-21",
+          "delivery_file_id": 141,
+          "delivery_version": 1,
+          "partition": "2026-08-21:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-22",
+          "delivery_file_id": 144,
+          "delivery_version": 1,
+          "partition": "2026-08-22:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-23",
+          "delivery_file_id": 147,
+          "delivery_version": 1,
+          "partition": "2026-08-23:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-24",
+          "delivery_file_id": 150,
+          "delivery_version": 1,
+          "partition": "2026-08-24:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-25",
+          "delivery_file_id": 153,
+          "delivery_version": 1,
+          "partition": "2026-08-25:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-26",
+          "delivery_file_id": 156,
+          "delivery_version": 1,
+          "partition": "2026-08-26:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-27",
+          "delivery_file_id": 159,
+          "delivery_version": 1,
+          "partition": "2026-08-27:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-28",
+          "delivery_file_id": 162,
+          "delivery_version": 1,
+          "partition": "2026-08-28:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-29",
+          "delivery_file_id": 165,
+          "delivery_version": 1,
+          "partition": "2026-08-29:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-30",
+          "delivery_file_id": 168,
+          "delivery_version": 1,
+          "partition": "2026-08-30:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-31",
+          "delivery_file_id": 170,
+          "delivery_version": 1,
+          "partition": "2026-08-31:display"
+        }
+      ],
+      "id": "maple",
+      "missing_dates": [],
+      "name": "Maple Goods",
+      "next_check": "Account owner: inspect active campaign constraints, pauses, budget settings, and delivery context; confirm the cause before considering client outreach.",
+      "owner": "owner-4",
+      "prior": {
+        "known_spend_cents": 280000000,
+        "plan_cents": 350000000,
+        "spend_cents": 280000000
+      },
+      "route": "commercial_investigation"
+    },
+    {
+      "change_cents": -175000000,
+      "current": {
+        "known_spend_cents": 105000000,
+        "plan_cents": 350000000,
+        "spend_cents": 105000000
+      },
+      "evidence": [
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-18",
+          "delivery_file_id": 132,
+          "delivery_version": 1,
+          "partition": "2026-08-18:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-19",
+          "delivery_file_id": 135,
+          "delivery_version": 1,
+          "partition": "2026-08-19:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-20",
+          "delivery_file_id": 138,
+          "delivery_version": 1,
+          "partition": "2026-08-20:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-21",
+          "delivery_file_id": 141,
+          "delivery_version": 1,
+          "partition": "2026-08-21:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-22",
+          "delivery_file_id": 144,
+          "delivery_version": 1,
+          "partition": "2026-08-22:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-23",
+          "delivery_file_id": 147,
+          "delivery_version": 1,
+          "partition": "2026-08-23:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-24",
+          "delivery_file_id": 150,
+          "delivery_version": 1,
+          "partition": "2026-08-24:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-25",
+          "delivery_file_id": 153,
+          "delivery_version": 1,
+          "partition": "2026-08-25:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-26",
+          "delivery_file_id": 156,
+          "delivery_version": 1,
+          "partition": "2026-08-26:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-27",
+          "delivery_file_id": 159,
+          "delivery_version": 1,
+          "partition": "2026-08-27:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-28",
+          "delivery_file_id": 162,
+          "delivery_version": 1,
+          "partition": "2026-08-28:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-29",
+          "delivery_file_id": 165,
+          "delivery_version": 1,
+          "partition": "2026-08-29:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-30",
+          "delivery_file_id": 168,
+          "delivery_version": 1,
+          "partition": "2026-08-30:display"
+        },
+        {
+          "account_file_id": 1,
+          "budget_file_id": 2,
+          "coverage_file_id": 3,
+          "date": "2026-08-31",
+          "delivery_file_id": 170,
+          "delivery_version": 1,
+          "partition": "2026-08-31:display"
+        }
+      ],
+      "id": "atlas",
+      "missing_dates": [],
+      "name": "Atlas Retail",
+      "next_check": "Account owner: inspect active campaign constraints, pauses, budget settings, and delivery context; confirm the cause before considering client outreach.",
+      "owner": "owner-1",
+      "prior": {
+        "known_spend_cents": 280000000,
+        "plan_cents": 350000000,
+        "spend_cents": 280000000
+      },
+      "route": "commercial_investigation"
+    }
+  ],
+  "route_counts": {
+    "commercial_investigation": 2,
+    "data_investigation": 1,
+    "no_decline_signal": 996,
+    "planned_change": 1
+  },
+  "rule_version": "decline-v1",
+  "scope": "Fictional USD spend; historical sample; latest accepted source restatements",
+  "snapshot_id": "da6e186a2158ed91",
+  "summary": {
+    "candidate_count": 2,
+    "candidate_decline_cents": 455000000,
+    "change_cents": -737123289,
+    "comparable_accounts": 999,
+    "current_plan_cents": 31423285012,
+    "current_spend_cents": 24680528036,
+    "deferred_count": 0,
+    "excluded_accounts": 1,
+    "excluded_current_known_cents": 240000000,
+    "excluded_prior_known_cents": 280000000,
+    "planned_change_cents": -280000000,
+    "planned_count": 1,
+    "prior_plan_cents": 31773285012,
+    "prior_spend_cents": 25417651325,
+    "queued_count": 2,
+    "total_accounts": 1000
+  }
+}

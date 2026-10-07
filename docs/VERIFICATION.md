@@ -41,3 +41,11 @@ The site sample builder reconciles all 56,000 exported account-days to the scale
 Browser checks passed for all four cases: Atlas's sample correction changes current spend to $1.30M; Harbor remains unknown until the late sample arrives, then becomes $2.80M; Maple shows observed zero; Beacon shows a scheduled ending with no current plan. Mobile layout was inspected at a 390 × 844 viewport override with no horizontal page overflow. Browser console contained no warnings or errors. The walkthrough is static; event acceptance is illustrative and has no database side effect.
 
 The updated plan removes mandatory model layers and tool branches. Python ingestion, PostgreSQL source history and SQL views, and a concise report are the core. Extra tools require a concrete learning or consumer need.
+
+## Executive reporting — October 7, 2026
+
+All 31 tests passed, including nine PostgreSQL integration checks. The report exercises independent scenario routing, late-arrival/correction effects, common-cohort exclusions, incomplete prior periods, observed zero, changed plans, zero baselines, exact threshold comparisons, ranking/capacity, bad input rejection, CSV output, and failed publication retaining the previous snapshot. The pacing rule uses exact integer cross-products to avoid rounding errors at the 10-percentage-point boundary.
+
+The full account-comparison CSV has 1,000 records and reconciles exactly to the website snapshot: 999 complete accounts, prior spend $254,176,513.25, current spend $246,805,280.36, change -$7,371,232.89. Harbor's current period stays unknown and is excluded from both portfolio totals. Rule groups reconcile to the same movement. The database command and CSV reproduction produce the same snapshot identifier and bytes.
+
+Desktop/mobile browser checks show the summary, paired daily chart, reconciled movement groups, ranked owner-review cards, incomplete delivery context, and expandable accepted source references. A 390 × 844 viewport override showed no horizontal page overflow; browser console had no errors or warnings. A dedicated print stylesheet supports the browser's print/save-PDF flow. This is a historical website report; operational cutoff enforcement, scheduling, and persistent review tracking remain pending.

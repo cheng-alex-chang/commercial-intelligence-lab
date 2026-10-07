@@ -26,6 +26,10 @@ def main():
     load.add_argument("path", type=Path)
     export = commands.add_parser("export", help="Export the account-day working view; not a published signal queue")
     export.add_argument("--output", type=Path, default=Path("outputs/account_day_working.csv"))
+    report = commands.add_parser("report", help="Validate and publish a comparison snapshot for the executive web report and CSV")
+    report.add_argument("--end-date", required=True, help="Last business date of the current seven-day window, YYYY-MM-DD")
+    report.add_argument("--capacity", type=int, default=5)
+    report.add_argument("--output", type=Path, default=Path("outputs/reports"))
     args = parser.parse_args()
     try:
         if args.command == "generate":
@@ -50,6 +54,11 @@ def main():
                 result = {"status": "schema_ready"}
             elif args.command == "load":
                 result = ingest(database_url, args.path)
+            elif args.command == "report":
+                from .reporting import build_report, publish_report
+                report = build_report(account_days(database_url), args.end_date, args.capacity)
+                snapshot_id = publish_report(report, args.output)
+                result = {"snapshot_id": snapshot_id, "output": str(args.output), **report["summary"]}
             else:
                 rows = account_days(database_url)
                 if not rows:

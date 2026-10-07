@@ -137,3 +137,26 @@ def test_multi_campaign_account_totals_do_not_fan_out(warehouse):
     assert value(con, "SELECT SUM(spend_usd) FROM lab.delivery") == value(con, "SELECT SUM(spend_usd) FROM lab.account_day_working")
     database.ingest(url, dataset / "events/correct_atlas")
     assert final_spend(con, "atlas") == Decimal("400000")
+
+
+def test_executive_report_matches_independent_expectations_and_source_events(warehouse):
+    from pathlib import Path
+    from ttd_lab.reporting import build_report
+
+    url, root, _ = warehouse
+    expected = json.loads(Path(__file__).with_name("scenario_expectations.json").read_text())
+    report = build_report(database.account_days(url), "2026-08-31")
+    accounts = {account["id"]: account for account in report["accounts"]}
+    for identity, values in expected["accounts"].items():
+        actual = accounts[identity]
+        assert actual["route"] == values["next_classification"]
+        assert actual["prior"]["spend_cents"] == int(Decimal(values["prior_spend"]) * 100)
+        assert actual["current"]["spend_cents"] == (None if values["current_spend"] is None else int(Decimal(values["current_spend"]) * 100))
+    database.ingest(url, root / "events/correct_atlas")
+    database.ingest(url, root / "events/late_harbor")
+    revised = build_report(database.account_days(url), "2026-08-31")
+    new = {account["id"]: account for account in revised["accounts"]}
+    assert new["atlas"]["current"]["spend_cents"] == 130000000
+    assert new["harbor"]["current"]["spend_cents"] == 280000000
+    assert new["harbor"]["route"] == "no_decline_signal"
+    assert revised["snapshot_id"] != report["snapshot_id"]

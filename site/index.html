@@ -16,7 +16,7 @@
     <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">ci</span> Commercial Intelligence Lab</a>
     <nav aria-label="Main navigation">
       <a href="#investigation">Explore the evidence</a>
-      <a href="#architecture">Architecture</a>
+      <a href="report.html">Executive briefing</a>
       <a class="repo-link" href="https://github.com/cheng-alex-chang/commercial-intelligence-lab">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -26,7 +26,7 @@
         <p class="eyebrow"><span class="dot"></span> Independent learning project · Synthetic data</p>
         <h1>A spend decline<br>is a question.<br><span>Start with evidence.</span></h1>
         <p class="lede">Which accounts deserve an investigation today? A focused Python and SQL workflow that checks the plan, the delivery, and the missing pieces before suggesting a next step.</p>
-        <div class="hero-actions"><a class="button primary" href="#investigation">Open the walkthrough <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/cheng-alex-chang/commercial-intelligence-lab#run-locally">Run it locally <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-actions"><a class="button primary" href="report.html">Read the executive briefing <span aria-hidden="true">↗</span></a><a class="text-link" href="#investigation">Explore account evidence <span aria-hidden="true">↓</span></a></div>
         <p class="hero-note">Built by Alex Chang to practice commercial intelligence engineering and analysis.</p>
       </div>
       <aside class="hero-card" aria-label="Featured account observation">
@@ -76,7 +76,7 @@
           <div class="interpretation"><div><span class="small-label">WHAT THE EVIDENCE SUPPORTS</span><p id="observation"></p></div><div><span class="small-label">NEXT CHECK</span><p id="next-check"></p></div></div>
           <div class="event-row"><p id="event-description"></p><button type="button" id="event-button" class="button secondary"></button><button type="button" id="reset-button" class="text-button" hidden>Reset sample</button></div>
           <details class="evidence"><summary>Inspect source evidence and daily values</summary><p id="source-note"></p><div class="table-scroll"><table><caption class="sr-only">Daily spend, plan, completeness, and delivery source references</caption><thead><tr><th scope="col">Business date</th><th scope="col">Spend</th><th scope="col">Plan</th><th scope="col">State</th><th scope="col">Delivery evidence</th></tr></thead><tbody id="daily-table"></tbody></table></div></details>
-          <p class="panel-footnote">Interpretations are scenario examples. The backend daily classifier, ranked queue, freshness gates, and review persistence are the next milestone.</p>
+          <p class="panel-footnote">Interpretations are scenario examples. The executive briefing applies the decline rule to all 1,000 accounts. Operational cutoff enforcement and persistent review tracking remain future work.</p>
         </div>
       </div>
     </section>
@@ -87,7 +87,7 @@
         <div><span class="small-label">INPUT</span><h3>Four file contracts</h3><p>Accounts, budgets,<br>coverage, delivery</p></div><span class="pipeline-arrow" aria-hidden="true">→</span>
         <div><span class="small-label">ACCEPT</span><h3>Python</h3><p>Validate, replay,<br>replace atomically</p></div><span class="pipeline-arrow" aria-hidden="true">→</span>
         <div><span class="small-label">QUERY</span><h3>PostgreSQL + SQL</h3><p>Source versions,<br>account-day views</p></div><span class="pipeline-arrow" aria-hidden="true">→</span>
-        <div><span class="small-label">EXPLAIN</span><h3>CSV → report</h3><p>Export implemented;<br>daily queue next</p></div>
+        <div><span class="small-label">EXPLAIN</span><h3>CSV → report</h3><p>Ranked priorities;<br>executive briefing</p></div>
       </div>
       <div class="principles"><article><span>01</span><h3>Preserve the evidence</h3><p>Exact source bytes, checksums, and versions make replay harmless and corrections traceable.</p></article><article><span>02</span><h3>Protect the meaning</h3><p>Missing spend stays unknown. Explicit zero stays zero. A scheduled ending carries its own context.</p></article><article><span>03</span><h3>Add tools for a reason</h3><p>The core stays in Python and SQL. Extra platforms become exercises when a specific need justifies them.</p></article></div>
       <a class="text-link" href="https://github.com/cheng-alex-chang/commercial-intelligence-lab/blob/main/docs/ARCHITECTURE.md">Read the architecture decisions <span aria-hidden="true">↗</span></a>
@@ -95,9 +95,9 @@
 
     <section id="verification" class="section verification-section">
       <div class="section-intro"><div><p class="eyebrow">03 / THE EVIDENCE</p><h2>Show what was verified.</h2></div><p>Correctness comes before a bigger stack. The full commercial export reconciles to the source manifest, with independent expectations for the four account cases.</p></div>
-      <div class="verification-grid"><div class="test-card"><strong>23</strong><h3>passing tests</h3><p>Including 8 PostgreSQL integration checks for replay, corrections, late arrival, missing versus zero, removal, rollback, and retry.</p><a href="https://github.com/cheng-alex-chang/commercial-intelligence-lab/actions">View CI results <span aria-hidden="true">↗</span></a></div><div class="measurements"><div><span>Source validation</span><strong>1.146s</strong></div><div><span>Initial load · 279,960 delivery rows</span><strong>3.467s</strong></div><div><span>Full account-day query · 56,000 rows</span><strong>3.086s</strong></div><p>Single local runs, not a controlled benchmark. These timings describe aggregate processing on a local machine.</p></div></div>
-      <div class="status-line"><span class="tag green">Implemented & verified</span><p>Contracts, deterministic fixtures, transactional ingestion, source history, account-day SQL, and CSV export.</p></div>
-      <div class="status-line"><span class="tag">Next milestone</span><p>Complete period comparison, evidence-backed investigation queue, publication and freshness checks, then a short decision memo.</p></div>
+      <div class="verification-grid"><div class="test-card"><strong>31</strong><h3>passing tests</h3><p>Including 9 PostgreSQL integration checks for replay, corrections, late arrival, missing versus zero, removal, rollback, and retry.</p><a href="https://github.com/cheng-alex-chang/commercial-intelligence-lab/actions">View CI results <span aria-hidden="true">↗</span></a></div><div class="measurements"><div><span>Source validation</span><strong>1.146s</strong></div><div><span>Initial load · 279,960 delivery rows</span><strong>3.467s</strong></div><div><span>Full account-day query · 56,000 rows</span><strong>3.086s</strong></div><p>Single local runs, not a controlled benchmark. These timings describe aggregate processing on a local machine.</p></div></div>
+      <div class="status-line"><span class="tag green">Implemented & verified</span><p>Contracts, deterministic fixtures, transactional ingestion, source history, account-day SQL, comparison rules, CSV export, and an executive briefing.</p></div>
+      <div class="status-line"><span class="tag">Next milestone</span><p>Operational freshness cutoffs, a short decision memo, and a bounded review pilot if useful.</p></div>
     </section>
 
     <section class="closing"><p class="eyebrow">READ IT. RUN IT. QUESTION IT.</p><h2>Follow the evidence<br>all the way to the source.</h2><div><a class="button primary" href="https://github.com/cheng-alex-chang/commercial-intelligence-lab">Explore the repository <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/cheng-alex-chang/commercial-intelligence-lab/blob/main/PROJECT_PLAN.md">Read the scoped plan <span aria-hidden="true">↗</span></a></div></section>

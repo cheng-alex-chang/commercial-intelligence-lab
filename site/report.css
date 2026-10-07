@@ -1,0 +1,133 @@
+.brief-heading {display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:55px 0 28px}
+.brief-heading .eyebrow {color:var(--orange);margin-bottom:18px}
+.brief-heading h1 {font-size:clamp(38px,4.7vw,62px)}
+.brief-heading h1 span {color:var(--orange)}
+.brief-subtitle {font-size:15px;color:var(--muted);margin-top:18px}
+.brief-actions {display:flex;flex-direction:column;align-items:flex-end;gap:14px;flex-shrink:0}
+.brief-period {display:flex;align-items:center;gap:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0;font-size:12px}
+.brief-period>span:last-child {margin-left:auto;color:var(--muted)}
+#report-loading {padding:28px 0}
+.executive-takeaway {padding:28px;margin-top:28px;background:var(--ink);color:white;border-radius:5px}
+.executive-takeaway .small-label {color:#b9cbb9}
+.executive-takeaway h2 {font-size:30px;margin:12px 0}
+.executive-takeaway p {font-size:14px;line-height:1.8;max-width:960px;color:#e1e8df}
+.brief-metrics {display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:29px 0;border-bottom:1px solid var(--line)}
+.brief-metrics>div {border-right:1px solid var(--line);padding-right:12px}
+.brief-metrics>div:last-child {border:0}
+.brief-metrics span,.brief-metrics small {display:block;font-size:11px;color:var(--muted)}
+.brief-metrics strong {display:block;font-size:33px;line-height:1.2;letter-spacing:-.04em;margin:12px 0 10px;font-weight:600}
+.brief-section {padding-top:44px}
+.brief-section-heading {display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:23px}
+.brief-section-heading .eyebrow {font-size:10px;color:var(--muted);margin-bottom:12px}
+.brief-section-heading h2 {font-size:30px}
+.brief-section-heading>p {max-width:360px;color:var(--muted);font-size:12px;line-height:1.8}
+.movement-grid {display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
+.trend-card,.bridge-card,.priority-card,.context-card {background:#fff;border:1px solid var(--line);padding:24px;border-radius:5px}
+.trend-title {display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.trend-title h3,.bridge-card h3 {font-size:18px;letter-spacing:-.02em}
+.legend-prior {background:var(--ink)}
+.trend-row {display:grid;grid-template-columns:35px 1fr;gap:13px;margin-top:13px;align-items:center;font-size:11px}
+.trend-pair {display:grid;gap:4px}
+.trend-series {display:flex;align-items:center;gap:9px}
+.trend-bar {display:block;height:8px;background:var(--ink);border-radius:1px;width:var(--width)}
+.trend-series.current .trend-bar {background:var(--orange)}
+.trend-series span {font-size:9px;white-space:nowrap;color:var(--muted);min-width:53px}
+.report-caption {font-size:10px;color:var(--muted);line-height:1.75;margin-top:19px}
+.bridge-card h3 {margin-bottom:19px}
+.bridge-row {display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:14px 0;font-size:12px}
+.bridge-row span {display:block}
+.bridge-row small {display:block;color:var(--muted);font-size:10px;margin-top:3px}
+.bridge-row strong {font-size:18px;white-space:nowrap;font-weight:550;letter-spacing:-.02em}
+.bridge-total {border-bottom:0;font-weight:600}
+.priority-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.priority-top {display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:19px}
+.priority-rank {display:block;font-size:10px;color:var(--orange);letter-spacing:.1em;margin-bottom:12px}
+.priority-top h3 {font-size:23px;line-height:1.25}
+.priority-top p {font-size:11px;color:var(--muted);margin-top:6px}
+.priority-loss {text-align:right}
+.priority-loss strong {display:block;font-size:28px;letter-spacing:-.04em;font-weight:600}
+.priority-loss span {display:block;font-size:11px;color:var(--orange)}
+.priority-values {display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.priority-values small {display:block;color:var(--muted);font-size:10px;margin-bottom:6px}
+.priority-values strong {font-size:15px;font-weight:600}
+.priority-explanation {font-size:13px;line-height:1.8;margin:18px 0}
+.next-check-box {padding:14px;background:var(--paper);border-left:3px solid var(--orange)}
+.next-check-box p {font-size:12px;line-height:1.8;margin-top:7px}
+.account-evidence {margin-top:16px;font-size:11px}
+.account-evidence summary {cursor:pointer;font-weight:600}
+.account-evidence p {margin-top:12px;line-height:1.8;color:var(--muted)}
+.account-evidence table {margin-top:12px}
+.context-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.context-card h3 {font-size:23px;margin:18px 0 12px}
+.context-card p {font-size:12px;line-height:1.85}
+.data-context {border-top:3px solid var(--blue)}
+.context-account {border-top:1px solid var(--line);padding-top:17px;margin-top:17px}
+.context-account h4 {margin:0 0 7px;font-size:15px}
+.context-account>p {color:var(--muted);margin-top:8px}
+.brief-method {border-top:1px solid var(--line);padding:25px 0;margin-top:40px}
+.brief-method h2 {font-size:20px;margin-bottom:12px}
+.brief-method p {color:var(--muted);font-size:12px;line-height:1.85;max-width:1010px}
+.brief-method details {margin-top:16px;font-size:12px}
+.brief-method summary {cursor:pointer;font-weight:600}
+.brief-method details p {margin:12px 0}
+.report-page footer {margin-top:15px}
+@media(max-width:900px) {
+  .brief-heading {align-items:flex-start;flex-direction:column;gap:20px}
+  .brief-actions {flex-direction:row;align-items:center;flex-wrap:wrap}
+  .brief-period {flex-wrap:wrap;gap:10px 18px}
+  .brief-period>span:last-child {margin-left:0}
+  .brief-metrics {grid-template-columns:1fr 1fr;gap:22px}
+  .brief-metrics>div:nth-child(2) {border:0}
+  .movement-grid {grid-template-columns:1fr}
+}
+@media(max-width:740px) {
+  .brief-heading {padding-top:32px}
+  .brief-heading h1 {font-size:40px}
+  .brief-subtitle {font-size:13px}
+  .brief-actions {gap:16px}
+  .brief-actions .text-link {font-size:11px}
+  .brief-period {font-size:10px}
+  .executive-takeaway {padding:20px}
+  .executive-takeaway h2 {font-size:24px;line-height:1.2}
+  .executive-takeaway p {font-size:12px}
+  .brief-metrics {gap:20px 12px}
+  .brief-metrics strong {font-size:29px}
+  .brief-metrics span,.brief-metrics small {font-size:10px}
+  .brief-section-heading {display:block}
+  .brief-section-heading h2 {font-size:26px}
+  .brief-section-heading>p {margin-top:12px}
+  .priority-cards,.context-grid {grid-template-columns:1fr}
+  .trend-card,.bridge-card,.priority-card,.context-card {padding:19px}
+  .trend-title {align-items:flex-start;flex-direction:column;gap:10px}
+  .priority-top h3 {font-size:22px}
+  .priority-loss strong {font-size:25px}
+  .priority-values {gap:8px}
+  .priority-values strong {font-size:13px}
+}
+@media print {
+  @page {size:A4;margin:14mm}
+  body.report-page {background:#fff;font-size:10pt;color:#222}
+  .report-page main {padding:0;max-width:none}
+  .topbar,.brief-actions,footer,.skip,#report-loading {display:none!important}
+  .brief-heading {padding:0 0 15px}
+  .brief-heading h1 {font-size:30pt}
+  .brief-heading .eyebrow {margin-bottom:10px}
+  .brief-period {font-size:8pt;padding:10px 0}
+  .executive-takeaway {background:#fff;color:#222;border:1px solid #aaa;margin-top:15px;padding:15px}
+  .executive-takeaway .small-label,.executive-takeaway p {color:#444}
+  .executive-takeaway h2 {font-size:17pt}
+  .executive-takeaway p {font-size:9pt}
+  .brief-metrics {grid-template-columns:repeat(4,1fr);padding:18px 0;gap:12px}
+  .brief-metrics strong {font-size:20pt}
+  .brief-section {padding-top:25px}
+  .brief-section-heading {display:block}
+  .brief-section-heading h2 {font-size:17pt}
+  .brief-section-heading>p {max-width:none;font-size:8pt;margin-top:8px}
+  .movement-grid,.priority-cards,.context-grid {display:block}
+  .trend-card,.bridge-card,.priority-card,.context-card {break-inside:avoid;margin-bottom:15px;padding:15px}
+  .priority-values {grid-template-columns:repeat(3,1fr)}
+  .account-evidence,.brief-method details {display:none}
+  .priority-card,.context-card,.executive-takeaway,.brief-metrics {break-inside:avoid}
+  a {text-decoration:none}
+  * {-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}

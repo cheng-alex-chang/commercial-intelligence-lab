@@ -4,9 +4,9 @@
 
 **Audience:** Software Engineer, Commercial Intelligence and Analytics; Senior Analyst, Commercial Intelligence & Analytics
 
-**Status:** M0 complete; M1 implemented and verified at commercial scale October 7, 2026; public walkthrough added; M2 next
+**Status:** M0 complete; M1 implemented and verified at commercial scale October 7, 2026; public walkthrough and executive reporting implemented; M2 operational freshness work remains
 
-Implementation notes: the first slice uses JSON source envelopes, latest accepted SQL views, and a dedicated PostgreSQL test database. It does not yet publish immutable snapshots or generate signals. See [README.md](README.md) and [source contracts](docs/SOURCE_CONTRACTS.md) for the concrete implementation and current limits.
+Implementation notes: the first slice uses JSON source envelopes, latest accepted SQL views, and a dedicated PostgreSQL test database. It now generates complete-period comparisons, explainable account routes, and immutable report artifacts for the executive website and CSV. Operational cutoffs and persistent review tracking are pending. See [README.md](README.md) and [source contracts](docs/SOURCE_CONTRACTS.md) for the concrete implementation and current limits.
 
 ## 1. Outcome
 
@@ -39,7 +39,7 @@ The following deliverables are recommended exercises inferred from those respons
 
 ## 3. Scope and architecture
 
-**Core:** four source contracts, deterministic fixtures, Python batch ingestion, PostgreSQL business queries, scenario checks, and a daily CSV/Markdown investigation report. Publish one brief explaining an account decision.
+**Core:** four source contracts, deterministic fixtures, Python batch ingestion, PostgreSQL business queries, scenario checks, and a daily website/CSV investigation report. Publish one brief explaining an account decision.
 
 **Portfolio presentation:** a public GitHub repository, polished README, and static GitHub Pages walkthrough using a verified sample. Browser event controls illustrate source corrections and late arrival; they do not operate a backend queue.
 
@@ -167,7 +167,7 @@ In a review pilot, measure eligible signals, queue delivery, reviews, time to re
 | --- | --- | --- |
 | M0: decision and contracts — complete | Brief, four contracts, six scenario expectations | Can explain who acts, what evidence is needed, and when to suppress a signal |
 | M1: trustworthy slice — complete | Generator, loader, account-day SQL view | Duplicate replay, correction/removal, failure recovery, missing, and zero scenarios behave correctly |
-| M2: useful queue | Repeatable daily CSV/Markdown output and account brief | Planned ending suppressed; actual decline explained; every item has owner, evidence, and next check |
+| M2: useful queue — report implemented; operational cutoffs pending | Repeatable executive website, comparison CSV, and account brief | Planned ending suppressed; actual decline explained; every item has owner, evidence, and next check |
 | Portfolio presentation — implemented | Repository, README, static interactive site | Sample reconciles; published site works on desktop and mobile |
 | Optional follow-up | Choose one revenue, CRM, BI, or warehouse learning exercise | New analysis reconciles and answers a defined question |
 
@@ -217,4 +217,4 @@ Bring these questions into onboarding:
 7. What are the team's deployment, monitoring, access, and incident practices?
 8. Which existing assets should be reused before building anything new?
 
-The preparation package is complete when the chosen scope passes its gates and you can defend its assumptions and limitations. M0 and the first M1 slice now pass their checks. The next action is M2: define complete seven-day comparisons, generate the evidence-backed investigation queue, and publish a concise report only after validation, with freshness and source evidence visible.
+The preparation package is complete when the chosen scope passes its gates and you can defend its assumptions and limitations. M0 and the first M1 slice now pass their checks. The executive briefing now compares complete seven-day periods, generates ranked priorities, exposes exclusions and evidence, and preserves successful snapshots. Finish M2 with operational cutoff/freshness handling and a short decision memo before expanding tools.

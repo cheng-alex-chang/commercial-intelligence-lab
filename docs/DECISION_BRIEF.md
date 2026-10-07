@@ -10,7 +10,7 @@ All entities, values, rules, and workflows are fictional preparation exercises.
 
 **Evidence:** two adjacent seven-day periods; observed advertiser spend; effective planned spend; account-level completeness; current owner; and source version references. Platform revenue is a different metric and is outside this first slice.
 
-**Initial rule for the next milestone:** prior spend >= $50,000; decline >= 20% and >= $10,000; complete evidence; positive planned spend in both periods; current plan >= 90% of prior; and pacing decline >= 10 percentage points. Rank by observed dollars declined and cap at five accounts. These are provisional learning parameters.
+**Implemented report rule:** prior spend >= $50,000; decline >= 20% and >= $10,000; complete evidence; positive planned spend in both periods; current plan >= 90% of prior; and pacing decline >= 10 percentage points. Rank by observed dollars declined and cap at five accounts. These are provisional learning parameters.
 
 **Routing:** complete unexpected declines go to the account owner. Missing expected delivery goes to the data reviewer. Ended flights with no current planned spend are planned changes. Observed zero spend remains zero; absent evidence remains unknown.
 
@@ -20,7 +20,7 @@ All entities, values, rules, and workflows are fictional preparation exercises.
 
 ## First technical handoff
 
-Generate separate account, budget, coverage, and daily delivery files. Validate their relationships before changing accepted data. Preserve bytes and versions; transactionally replace complete partitions. Produce an account-day working view with spend NULL when expected delivery is missing. This working view supports debugging; a versioned, freshness-gated publication and investigation queue follow in M2.
+Generate separate account, budget, coverage, and daily delivery files. Validate their relationships before changing accepted data. Preserve bytes and versions; transactionally replace complete partitions. Produce an account-day working view with spend NULL when expected delivery is missing. The shared report logic now compares two complete periods, ranks owner-review candidates, and produces a website briefing and CSV from the same immutable snapshot. Operational freshness/cutoff enforcement remains future work.
 
 ## Learning checkpoint
 

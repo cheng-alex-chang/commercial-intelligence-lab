@@ -9,3 +9,4 @@ work/*
 !work/.gitkeep
 .DS_Store
 outputs/*.csv
+outputs/reports/
